@@ -1,0 +1,45 @@
+   
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>File Uploads</title>
+	<script src="http://jwpsrv.com/library/6LTSqKNjEeOXXSIACrqE1A.js"></script>
+    
+</head>
+<body>
+<b>Twit-tube is about to begin</b> <br>
+<a href="@{Files.listUploads}">Chat Threads</a>
+<ul>
+<div class="container">
+      <div class="col-md-7">
+          <video width="480" height="360" controls>
+            <source src="http://d1cqwc76ahu1d1.cloudfront.net/${mainThread.fileId}" type=video/mp4>
+          </video>
+      </div>
+    </div>
+    
+</ul>
+<ul>
+${mainThread.fileName}
+#{list replyThreads, as:'rThread'}
+   <div class = container">
+   <div class="col-lg-4">
+            <video width="320" height="240" controls>
+              <source src="http://d1cqwc76ahu1d1.cloudfront.net/${rThread.fileId}" type=video/mp4>
+            </video>
+          </div>
+          </div>
+#{/list}
+</ul>
+<ul>
+
+#{form @doUpload(), enctype:'multipart/form-data'}
+   <input type="file" name="file"><br/>
+   Comment: <input type="text" name="comment"><br/>
+  <input type="hidden" name="ParentId" value=${ParentId}>
+  <input type="submit" name="submit" value="Reply">
+#{/form}
+</ul>
+</body>
+</html>
