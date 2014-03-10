@@ -44,6 +44,7 @@ public class Files extends Controller
     
     listUploadsVideos(ParentId);
   }
+
   public static void doUploadNewChat(File file, String comment) throws Exception
   {
 	java.util.Date date= new java.util.Date();
@@ -86,7 +87,4 @@ public class Files extends Controller
     //response.setContentTypeIfNotSet(doc.file.type());
     //renderBinary(doc.file.get(), doc.fileName);
   }
-	
-	
-
 }
