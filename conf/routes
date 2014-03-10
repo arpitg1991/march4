@@ -9,6 +9,11 @@ GET     /downloadFile                           Files.downloadFile
 GET		/chat/{ParentId}						Files.listUploadsVideos
 POST    /doUpload                               Files.doUpload
 POST	/doUploadNewChat						Files.doUploadNewChat
+POST 	/createSNSService						Notifications.createSNSService
+GET 	/createSNSService						Notifications.createSNSService
+GET		/run									Notifications.run
+GET		/subscribeToTopic						Notifications.subscribeToTopic
+GET 	/createTopic							Notifications.createTopic
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

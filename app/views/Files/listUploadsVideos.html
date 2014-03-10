@@ -113,12 +113,32 @@
 				<p class="lead">Upload New Video:</p>
 				#{form @doUpload(), enctype:'multipart/form-data'} <input
 					type="file" name="file"> <br /> Comment: <input
-					type="text" name="comment"> <br /> <input type="hidden"
+					type="text" name="comment"> 
+					<br /> 
+					<input type="hidden"
 					name="ParentId" value=${ParentId}> <input type="submit"
 					name="submit" value="Reply"> #{/form}
 			</div>
 		</div>
 	</ul>
+
+	<hr class="featurette-divider">
+
+	<ul>
+		<div class="container">
+			<div class="col-md-7">
+				<p class="lead">Subscribe to thread:</p>
+				#{form @Notifications.createSNSService(), enctype:'multipart/form-data'} 
+				Enter your email Id :
+				<input type="text" name="emailId"> 
+					<br /> 
+					
+					<input type="hidden" name="topicName" value=${ParentId}>
+					<input type="submit" name="submit" value="Subscribe"> #{/form}
+			</div>
+		</div>
+	</ul>
+
 
 	<!-- Bootstrap core JavaScript
     ================================================== -->
