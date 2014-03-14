@@ -41,7 +41,9 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Twit-Tube</a>
+				<a href="default.asp">
+			<img src="https://github.com/arpitg1991/march4/blob/master/tt-twitter-youtube-01-2013.jpg?raw=true" alt="HTML tutorial" width="42" height="42">
+		  </a>
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
@@ -61,7 +63,19 @@
 			</p>
 		</div>
 	</div>
-
+	<ul>
+		<div class="container">
+			<div class="col-md-7">
+				<p class="lead">Upload New Video:</p>
+				#{form @doUploadNewChat(), enctype:'multipart/form-data'} <input
+					type="file" name="file"> <br />
+					<input type="hidden" name="comment" value = "comment"> <input type="hidden"
+					name="isParent" value="n"> <input type="submit"
+					name="submit" value="Upload"> #{/form}
+			</div>
+		</div>
+	</ul>
+	<hr class="featurette-divider">
 	<ul>
 		#{list names, as:'name'}
 		<div class="container">
@@ -78,18 +92,7 @@
 		<hr class="featurette-divider">
 		#{/list}
 	</ul>
-
-	<ul>
-		<div class="container">
-			<div class="col-md-7">
-				<p class="lead">Upload New Video:</p>
-				#{form @doUploadNewChat(), enctype:'multipart/form-data'} <input
-					type="file" name="file"> <br /> Comment: <input
-					type="text" name="comment"> <input type="hidden"
-					name="isParent" value="n"> <input type="submit"
-					name="submit" value="Upload"> #{/form}
-			</div>
-		</div>
-	</ul>
+	
+	
 </body>
 </html>
