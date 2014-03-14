@@ -14,7 +14,7 @@ GET 	/createSNSService						Notifications.createSNSService
 GET		/run									Notifications.run
 GET		/subscribeToTopic						Notifications.subscribeToTopic
 GET 	/createTopic							Notifications.createTopic
-
+GET		/about									Files.about
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

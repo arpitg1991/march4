@@ -140,4 +140,8 @@ public class Files extends Controller
 		//response.setContentTypeIfNotSet(doc.file.type());
 		//renderBinary(doc.file.get(), doc.fileName);
 	}
+	public static void about(){
+		render() ;
+	}
+		
 }
