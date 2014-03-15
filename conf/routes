@@ -3,7 +3,8 @@
 # ~~~~
 
 # Home page
-GET     /			                            Files.listUploads
+GET		/										Files.facebookLogin
+GET     /listUploads			                Files.listUploads
 GET     /uploadForm                             Files.uploadForm
 GET     /downloadFile                           Files.downloadFile
 GET		/chat/{ParentId}						Files.listUploadsVideos

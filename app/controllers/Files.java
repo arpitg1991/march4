@@ -36,7 +36,9 @@ public class Files extends Controller
 	{
 		render();
 	}
-
+	public static void facebookLogin () {
+		render();
+	}
 	public static void doUpload(File file, String comment, String ParentId ) throws Exception
 	{
 		java.util.Date date= new java.util.Date();
